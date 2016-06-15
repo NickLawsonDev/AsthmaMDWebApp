@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AsthmaMDWebApp.Data
 {
     public class UserProfile
     {
+        [Key, ForeignKey("ApplicationUser")]
+        public string UserId { get; set; }
+
     }
 }
